@@ -13,16 +13,17 @@ const Header: React.FC = () => {
                 src={process.env.PUBLIC_URL + "/images/cross.jpg"}
                 alt="logo, cross"
               />
-              <h1>TradiPoste</h1>
+              <h1>MaPoste</h1>
             </li>
           </Link>
         </ul>
 
         <ul className="submenu">
-          <Link to="/formulaire-authentification">
+          <Link to="/formulaire/authentification">
             <li className="menu">Authentification</li>
           </Link>
-          <Link to="/formulaire-contact">
+          <span>|</span>
+          <Link to="/formulaire/contact">
             <li className="menu">Contact</li>
           </Link>
 
