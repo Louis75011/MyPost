@@ -1,0 +1,14 @@
+{
+  "id": 4,
+  "name": "Louis Rouanet",
+  "address": "63 rue Léon Frot",
+  "description": "Je suis comme un lieu de récepetion de colis.",
+  "phone": "665604650",
+  "contact": "contact@sanc+.am",
+  "email": "",
+  "position": {
+    "x": 1,
+    "y": 2,
+    "z": 10
+  }
+}

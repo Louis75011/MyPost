@@ -1,0 +1,14 @@
+{
+  "id": 3,
+  "name": "Julien Faux",
+  "address": "Bordeaux",
+  "description": "Je suis comme un lieu de récepetion de colis.",
+  "phone": "765604650",
+  "contact": "contact@sanc+.am",
+  "email": "",
+  "position": {
+    "x": 19,
+    "y": 24,
+    "z": 130
+  }
+}

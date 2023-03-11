@@ -1,0 +1,24 @@
+// Variety
+$link-color: rgb(7, 7, 220);
+
+// Background gadient colors
+$bg-gradient-home1: linear-gradient(
+  120deg,
+  rgb(184, 16, 50) 0%,
+  #0c6c98 51%,
+  rgb(184, 16, 50) 100%
+); // crimson
+
+$bg-gradient-home2: linear-gradient(
+  45deg,
+  rgb(108, 162, 180) 0%,
+  rgb(57, 84, 94) 51%,
+  rgb(108, 162, 180) 100%
+); // purple
+
+$bg-gradient-home3: linear-gradient(
+  to right,
+  rgb(135, 8, 135) 0%,
+  #bfbfbf 51%,
+  rgb(135, 8, 135) 100%
+);

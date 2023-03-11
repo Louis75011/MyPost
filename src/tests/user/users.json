@@ -1,0 +1,33 @@
+{
+  "users": {
+    "user1": {
+      "id": 1,
+      "ci": {},
+      "firstName": "Louis",
+      "lastName": "Rouanet",
+      "pseudonym": "LR",
+      "birthday": "05.09.1990",
+      "email": "",
+      "address": "",
+      "phone": "",
+      "level": {
+        "greatUser": "greatUser"
+      }
+    },
+
+    "user2": {
+      "id": 2,
+      "ci": {},
+      "firstName": "Julien",
+      "lastName": "Faux",
+      "pseudonym": "",
+      "birthday": "05.09.1990",
+      "email": "",
+      "address": "",
+      "phone": "",
+      "level": {
+        "admin": "admin"
+      }
+    }
+  }
+}
