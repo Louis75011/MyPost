@@ -6,18 +6,22 @@ import Home from "./component/screens/Home.tsx";
 
 describe("texts rendering exists", () => {
   it("Home's text exist in Home component", () => {
-    render(<Home />); // Rendu du composant Error
-    const textMessage = screen.getByText(/Notre service/i); // Recherche du texte "Erreur 404"
+    render(
+      <BrowserRouter>
+        <Home />
+      </BrowserRouter>
+    );
+    const textMessage = screen.getByText(/Nos principes/i); // Recherche du texte "Erreur 404"
     expect(textMessage).toBeInTheDocument(); // Vérification que le message d'erreur est présent dans le document
   });
 
-  it("Home's text exist in Layout/Header component", () => {
+  it("TradiPoste's text exist in Layout/Header component", () => {
     render(
       <BrowserRouter>
         <Layout />
       </BrowserRouter>
     );
-    const homeLink = screen.getByText("Contact");
+    const homeLink = screen.getByText("TradiPoste");
     expect(homeLink).toBeInTheDocument();
   });
 
