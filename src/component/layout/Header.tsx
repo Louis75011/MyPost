@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { FaBars, FaTimes, FaUser, FaEnvelope, FaTruck } from "react-icons/fa";
 import "../../style/layout/Header.scss";
 
 const Header: React.FC = () => {
@@ -8,12 +9,12 @@ const Header: React.FC = () => {
   const location = useLocation();
 
   useEffect(() => {
-    setShowMenu(false); // Menu se ferme au changement de chemin
+    setShowMenu(false); // Menu se refferme au changement de route
   }, [location.pathname]);
 
   useEffect(() => {
     function handleResize() {
-      setMobile(window.innerWidth);
+      setMobile(window.innerWidth); // Controle taille d'écran actuelle
     }
     window.addEventListener("resize", handleResize);
 
@@ -22,9 +23,21 @@ const Header: React.FC = () => {
     };
   }, []);
 
+  useEffect(() => {
+    handleScrollNone(showMenu);
+  }, [showMenu]);
+
+  function handleScrollNone(showMenu: boolean) {
+    if (showMenu) {
+      document.body.style.overflow = "hidden"; // Empeche scroll à l'ouverture du burger menu
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }
+
   function toggleMenu(e: any) {
     e.preventDefault();
-    setShowMenu(!showMenu);
+    setShowMenu(!showMenu); // Ouvre et ferme le burger menu
   }
 
   return (
@@ -41,16 +54,22 @@ const Header: React.FC = () => {
             </li>
           </Link>
         </ul>
-
+        {/* Desk */}
         {isMobile > 790 ? (
           <ul className="submenu">
-            <Link to="/formulaire/authentification">
-              <li className="menu">Authentification</li>
-            </Link>
-            <span>|</span>
-            <Link to="/formulaire/contact">
-              <li className="menu">Contact</li>
-            </Link>
+            <div className="flex-icon-text">
+              <FaUser className="menu-icon" />
+              <Link to="/formulaire/authentification">
+                <li className="menu">Authentification</li>
+              </Link>
+            </div>
+            <span className="vertical-bar">|</span>
+            <div className="flex-icon-text">
+              <FaEnvelope className="menu-icon" />
+              <Link to="/formulaire/contact">
+                <li className="menu">Contact</li>
+              </Link>
+            </div>
             <li className="menu">
               <Link to="/">
                 <img
@@ -61,19 +80,25 @@ const Header: React.FC = () => {
             </li>
           </ul>
         ) : (
+          // Mob
           <>
-            <button
-              className={`burger-menu ${showMenu ? "open" : "close"}`}
-              onClick={toggleMenu}
-            >
+            <button className="burger-menu" onClick={toggleMenu}>
+              {showMenu ? <FaTimes /> : <FaBars />}
             </button>
             {showMenu && (
-              <div className="mobile-menu">
+              <div className={`mobile-menu ${showMenu ? "open" : "closed"}`}>
                 <Link to="/formulaire/authentification">
-                  <div className="menu">Authentification</div>
+                  <div className="menu">
+                    <FaUser className="menu-icon" />
+                    <span>Authentification</span>
+                  </div>
                 </Link>
+
                 <Link to="/formulaire/contact">
-                  <div className="menu">Contact</div>
+                  <div className="menu">
+                    <FaEnvelope className="menu-icon" />
+                    <span>Contact</span>
+                  </div>
                 </Link>
               </div>
             )}

@@ -65,7 +65,7 @@ const Home: React.FC = () => {
               </div>
               <p>
                 C'est fini les colis perdus ou arrivés en morceaux, et sans
-                frais supplémentaire .
+                frais supplémentaire
               </p>
             </div>
 

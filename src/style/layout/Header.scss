@@ -1,45 +1,146 @@
 @import "../variables/Theme.scss";
 
-header {
-  nav {
-    width: 100%;
-    height: 130px;
+nav {
+  width: 100%;
+  height: 130px;
+  display: flex;
+  justify-content: space-between;
+  background: $bg-gradient-header1;
+  border-bottom: solid 2px black;
+
+  .flex-icon-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+    svg {
+      font-size: 20px;
+      margin-bottom: 0.3rem;
+    }
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  a {
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    color: white;
+  }
+
+  ul {
     display: flex;
     justify-content: space-between;
-    background: $bg-gradient-header1;
-    border-bottom: solid 2px black;
+    align-items: center;
+    list-style-type: none;
+  }
 
-    a {
+  li {
+    margin: 0 0.5rem;
+
+    &.title {
       display: flex;
-      text-decoration: none;
       align-items: center;
+    }
+
+    &.menu {
       color: white;
     }
+  }
 
-    ul {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      list-style-type: none;
+  img {
+    height: 90px;
+    border-radius: 1rem;
+    margin: 0 1rem;
+  }
+
+  .vertical-bar {
+    color: white;
+    font-size: 20px;
+    padding: 0 0.3rem;
+  }
+}
+
+@media (max-width: 790px) {
+  #root > header > nav > div {
+    margin: 1rem auto;
+    gap: 1rem;
+  }
+
+  nav {
+    justify-content: space-around;
+
+    .flex-icon-text {
+      svg {
+        margin-bottom: 0;
+      }
     }
 
-    li {
-      margin: 0 0.5rem;
+    .mobile-menu,
+    .open {
+      position: absolute;
+      top: 116px;
+      background: $bg-gradient-header3;
+      width: 100%;
+      height: 100vh;
+      transition: max-height 0.35s ease-out;
+      z-index: 30;
+      // overflow: hidden;
+    }
 
-      &.title {
-        display: flex;
-        align-items: center;
-      }
-
-      &.menu {
-        color: white;
-      }
+    h1 {
+      font-size: 22px;
     }
 
     img {
-      height: 90px;
-      border-radius: 1rem;
-      margin: 0 1rem;
+      height: 80px;
+    }
+
+    .burger-menu {
+      display: block;
+      width: 35px;
+      height: 35px;
+      position: relative;
+      top: 46px;
+      border: none;
+      color: darkred;
+      border-radius: 0.5rem;
+      cursor: pointer;
+
+      svg {
+        position: relative;
+        top: 2px;
+        margin-bottom: 0;
+      }
+    }
+
+    .menu {
+      width: 100%;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:hover {
+        box-shadow: 0px 1px 8px 1px;
+      }
+
+      svg {
+        margin-right: 0.5rem;
+        font-size: 22px;
+      }
+
+      span {
+        font-size: 22px;
+      }
+
+      a {
+        font-size: 30px;
+      }
     }
   }
 }
