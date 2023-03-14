@@ -332,6 +332,7 @@ main {
         justify-content: center;
         align-items: center;
       }
+
       .join-us-texts {
         width: 92%;
         display: flex;
@@ -339,18 +340,22 @@ main {
         align-items: center;
         margin: 2rem 0 0 0;
 
+        button {
+          margin: 0.7rem 0;
+        }
+
         p {
           text-align: center;
           width: 280px;
-          font-size: 16px;
-          font-weight: 700;
+          font-size: 15px;
+          font-weight: 600;
           letter-spacing: 0;
           margin-bottom: 0.1rem;
         }
       }
 
       img {
-        height: 280px;
+        height: 270px;
       }
     }
   }

@@ -19,9 +19,9 @@ const Home: React.FC = () => {
     }
   }, [anchor]);
 
-  const handleClick = (event: React.MouseEvent<HTMLLIElement>) => {
-    setAnchor(event.currentTarget.dataset.anchor || "");
-  };
+  // const handleClick = (event: React.MouseEvent<HTMLLIElement>) => {
+  //   setAnchor(event.currentTarget.dataset.anchor || "");
+  // };
 
   return (
     <main>
