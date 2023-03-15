@@ -13,7 +13,7 @@ const Carousel: React.FC = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 2500);
+    }, 3500);
     return () => clearInterval(interval);
   }, []);
 

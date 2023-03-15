@@ -7,14 +7,18 @@ body,
 
 @import url("https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
-h1,
+h1 {
+  font-family: "Lobster Two", cursive;
+  -webkit-text-stroke: 1px black;
+}
+
 h2,
 h3,
 h4,
 h5,
 h6,
 .other-title {
-  font-family: "Lobster Two", cursive;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   -webkit-text-stroke: 1px white;
 }
 

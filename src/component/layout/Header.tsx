@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { FaBars, FaTimes, FaUser, FaEnvelope, FaTruck } from "react-icons/fa";
+import { FaBars, FaTimes, FaUser, FaEnvelope } from "react-icons/fa";
 import "../../style/layout/Header.scss";
 
 const Header: React.FC = () => {
@@ -35,7 +35,7 @@ const Header: React.FC = () => {
     }
   }
 
-  function toggleMenu(e: any) {
+  function toggleMenu(e: React.MouseEvent<HTMLButtonElement>) {
     e.preventDefault();
     setShowMenu(!showMenu); // Ouvre et ferme le burger menu
   }
@@ -58,15 +58,15 @@ const Header: React.FC = () => {
         {isMobile > 790 ? (
           <ul className="submenu">
             <div className="flex-icon-text">
-              <FaUser className="menu-icon" />
-              <Link to="/formulaire/authentification">
-                <li className="menu">Authentification</li>
+              <Link to="/formulaire/connexion">
+                <FaUser className="menu-icon" />
+                <li className="menu">Connexion</li>
               </Link>
             </div>
             <span className="vertical-bar">|</span>
             <div className="flex-icon-text">
-              <FaEnvelope className="menu-icon" />
               <Link to="/formulaire/contact">
+                <FaEnvelope className="menu-icon" />
                 <li className="menu">Contact</li>
               </Link>
             </div>

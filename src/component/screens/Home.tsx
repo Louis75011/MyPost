@@ -125,7 +125,7 @@ const Home: React.FC = () => {
             </p>
             <p>Rejoignez-nous dès maintenant</p>
             <Link to="/formulaire/authentification">
-              <button>Inscription / Connexion</button>
+              <button>Inscription</button>
             </Link>
             <Link to="/formulaire/contact">
               <button>Question</button>

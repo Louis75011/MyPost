@@ -17,7 +17,7 @@ const App = () => {
         <Route element={<Layout />}>
           {/* Public pages */}
           <Route index path="/" element={<Home />} />
-          <Route path="/formulaire/authentification" element={<AuthForm />} />
+          <Route path="/formulaire/connexion" element={<AuthForm />} />
           <Route path="/formulaire/contact" element={<ContactForm />} />
           {/* Connected User */}
           {/* <Route path="/compte-sanc+am" element={<Account />} /> */}

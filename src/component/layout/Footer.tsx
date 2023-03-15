@@ -7,9 +7,7 @@ const Footer: React.FC = () => {
       <div className="left-container">
         <h4>Administration :</h4>
         <p>
-          <a href="mailto:contact@louis-rouanet.fr">
-            Contacter l'administration de Sanc+.am
-          </a>
+          <a href="mailto:contact@louis-rouanet.fr">Contacter Sanc+.am</a>
         </p>
         <h4>Documentations :</h4>
         <p>
